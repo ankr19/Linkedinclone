@@ -1,0 +1,33 @@
+.posts{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.posts .post_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.posts .post_header .post_headerLeft{
+    display: flex;
+    align-items: center;
+}
+
+.posts .post_header .post_name h3{
+    font-size: 19px;
+    margin: 0px;
+    margin-left: 10px;
+}
+.posts .post_header .post_name p{
+    font-size: 12px;
+    margin: 0px ;
+    margin-left: 10px;
+}
+
+
+.post_body{
+    font-size: 15px;
+    margin: 0px 12px;
+}

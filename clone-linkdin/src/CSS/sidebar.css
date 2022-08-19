@@ -1,0 +1,38 @@
+.sidebar{
+    display: flex;
+    flex: 0.25;
+    flex-direction: column;
+}
+.add h4{
+    margin-bottom: 0px;
+}
+
+.add p{
+    margin: 5px 10px;
+    font-size: 13px;
+    color: #335;
+}
+
+.sidebar_recent{
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    position: sticky;
+    top: 60px;
+}
+
+.sidebar_recent p{
+    margin: 0px 0px 10px 0px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    columns: #000;
+}
+
+.hash span{
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 5px;
+    color: #333;
+}
