@@ -30,7 +30,7 @@ const Header = () => {
           <div className="bg-white d-none d-sm-block d-sm-none d-md-block mx-4">
           <SearchIcon />
           <input type="text" placeholder="search" />
-          </div><button
+          </div><buttond
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -40,7 +40,7 @@ const Header = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </buttond>
           <div
             className="navbar-collapse"
             id="navbarSupportedContent"

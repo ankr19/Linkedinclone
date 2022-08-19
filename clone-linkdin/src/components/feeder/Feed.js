@@ -4,8 +4,8 @@ import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import EventIcon from "@mui/icons-material/Event";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import "../CSS/feed.css";
-import Post from "./Post/Post";
+import "../../CSS/feed.css";
+import Post from "../Post/Post";
 
 const Feed = () => {
   return (
@@ -46,6 +46,9 @@ const Feed = () => {
         </div>
       </div>
 
+      <Post/>
+      <Post/>
+      <Post/>
       <Post/>
 
     </div>

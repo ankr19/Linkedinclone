@@ -27,7 +27,34 @@
 }
 
 
-.post_body{
+.post_body p{
     font-size: 15px;
-    margin: 0px 12px;
+    padding: 20px 0px;
+}
+
+.post_footer{
+    display: flex;
+    border-top: 3px solid #ccc;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.post_footer .post_footOption{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.post_footer .post_footOption svg{
+    margin-top: 10px;
+    color: #333;
+
+}
+
+
+.post_footer .post_footOption span{
+    padding-top: 10px;
+    color: rgb(121, 117, 117);
+    margin-left: 5px;
 }
