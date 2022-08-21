@@ -1,17 +1,17 @@
-import React from 'react';
-import Feed from './components/feeder/Feed';
-import Header from './components/header/Header';
-import Sidebar from './components/sidebar/Sidebar';
-import Widget from './components/wedget/Widget';
+import React from "react";
+import Feed from "./components/feeder/Feed";
+import Header from "./components/header/Header";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
     <div>
-      <Header/>
+      <div className="container-fluid">
+        <Header />
+      </div>
       <div className="container app_body my-1">
-        <Sidebar/>
+        <Sidebar />
         <Feed />
-        <Widget/>
       </div>
     </div>
   );
