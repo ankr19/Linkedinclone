@@ -6,7 +6,7 @@
 .pnp.js
 
 # no sending the file which is important
-/src/firebase.js
+/src/Firebase1.js
 
 # testing
 /coverage

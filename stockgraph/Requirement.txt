@@ -1,0 +1,6 @@
+for install the missing document
+-> npm install 
+
+
+for starting the server for react
+-> npm start 

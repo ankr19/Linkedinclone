@@ -6,23 +6,21 @@ import CommentIcon from "@mui/icons-material/Comment";
 import ShareIcon from "@mui/icons-material/Share";
 import SendIcon from "@mui/icons-material/Send";
 import "../../CSS/post.css";
-const Post = () => {
+const Post = ({name, description, message, photoURL}) => {
   return (
     <div className="posts my-2">
       <div className="post_header">
         <div className="post_headerLeft">
-          <Avatar />
+          <Avatar src={photoURL} />
           <div className="post_name">
-            <h3>Anand Kumar</h3>
-            <p>We are learning Reactjs</p>
+            <h3>{name}</h3>
+            <p>{description}</p>
           </div>
         </div>
         <MoreHorizIcon />
       </div>
       <div className="post_body my-3 mx-2">
-        <p>This is testing post</p>
-        <p>This is testing post</p>
-        <p>This is testing post</p>
+        <p>{message}</p>
       </div>
       <div className="post_footer">
         <div className="post_footOption">

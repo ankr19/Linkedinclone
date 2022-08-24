@@ -1,19 +1,26 @@
-import React from "react";
-import Feed from "./components/feeder/Feed";
-import Header from "./components/header/Header";
-import Sidebar from "./components/sidebar/Sidebar";
-
+import React, { useEffect } from "react";
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import Home from "./components/home/Home";
+import Login from "./components/login/Login";
+import SignUp from "./components/signup/SignUp";
 function App() {
+  const history = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem("buddy")) {
+      history('/home')
+    } else {
+      history('/login');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
-    <div>
-      <div className="container-fluid">
-        <Header />
-      </div>
-      <div className="container app_body my-1">
-        <Sidebar />
-        <Feed />
-      </div>
-    </div>
+    <>
+    <Routes>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp />} />
+    </Routes>
+    </>
   );
 }
 
