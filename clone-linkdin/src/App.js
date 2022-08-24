@@ -6,7 +6,7 @@ import SignUp from "./components/signup/SignUp";
 function App() {
   const history = useNavigate();
   useEffect(() => {
-    if (localStorage.getItem("buddy")) {
+    if (!localStorage.getItem("buddy")) {
       history('/home')
     } else {
       history('/login');
