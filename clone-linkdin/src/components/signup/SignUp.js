@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { loginuser } from "../../features/user/userSlice";
+import { auth } from "../../Firebase1";
+import { useDispatch } from "react-redux";
 
 const SignUp = () => {
   const [creditial, setCreditial] = useState({
@@ -8,6 +11,8 @@ const SignUp = () => {
     password: "",
     photoURL: "",
   });
+
+  const dispatch = useDispatch();
   const handleClick = (e) => {
     e.preventDefault();
     if (!creditial.email) {
@@ -22,6 +27,28 @@ const SignUp = () => {
     if (!creditial.password) {
       alert("Enter a the password");
     }
+
+    auth
+      .createUserWithEmailAndPassword(creditial.email, creditial.password)
+      .then((userAuth) => {
+        userAuth.user
+          .updateProfile({
+            displayName: creditial.name,
+            photoURL: creditial.photoURL,
+          })
+          .then(() => {
+            dispatch(
+              loginuser({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                photoURL: creditial.photoURL,
+                displayName: creditial.name,
+              })
+            );
+          });
+      })
+      .catch((error) => alert(error));
+
     setCreditial({
       name: "",
       email: "",
