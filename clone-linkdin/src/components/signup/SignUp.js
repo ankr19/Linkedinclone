@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { loginuser } from "../../features/user/userSlice";
 import { auth } from "../../Firebase1";
 import { useDispatch } from "react-redux";
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 
 const SignUp = () => {
   const [creditial, setCreditial] = useState({
@@ -62,7 +65,7 @@ const SignUp = () => {
   return (
     <div className="container my-5">
       <form className="row g-3 needs-validation" noValidate>
-        <div className="col-md-4 position-relative">
+        <div className="col position-relative">
           <label htmlFor="Fname" className="form-label">
             Full Name
           </label>
@@ -76,6 +79,7 @@ const SignUp = () => {
             required
           />
           <div className="valid-tooltip">Looks good!</div>
+          
         </div>
         <div className="col-md-4 position-relative">
           <label htmlFor="Email" className="form-label">
@@ -83,7 +87,7 @@ const SignUp = () => {
           </label>
           <div className="input-group has-validation">
             <span className="input-group-text" id="email">
-              <i className="bi bi-envelope"></i>
+              <EmailIcon/>
             </span>
             <input
               type="text"
@@ -98,13 +102,13 @@ const SignUp = () => {
             <div className="invalid-tooltip">Please enter valid Email.</div>
           </div>
         </div>
-        <div className="col-md-4 position-relative">
+        <div className="col position-relative">
           <label htmlFor="Password" className="form-label">
             password
           </label>
           <div className="input-group has-validation">
             <span className="input-group-text" id="PasswordPrepend">
-              <i className="bi bi-lock-fill"></i>
+              <LockIcon/>
             </span>
             <input
               type="password"
@@ -128,7 +132,7 @@ const SignUp = () => {
               className="input-group-text"
               id="validationTooltipUsernamePrepend"
             >
-              <i className="bi bi-lock-fill"></i>
+              <AddToPhotosIcon/>
             </span>
             <input
               type="text"
@@ -144,7 +148,7 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div className="col-12">
+        <div className="col-12 text-center">
           <button
             onClick={handleClick}
             className="btn btn-primary"

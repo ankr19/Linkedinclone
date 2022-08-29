@@ -36,7 +36,7 @@ const Feed = () => {
     <div className="feed">
       <div className="feed_input">
         <div className="feed_form">
-          <Avatar />
+          <Avatar  />
           <form onSubmit={handleSubmit}>
             <input type="text" id="post" value={input} onChange={(e)=> setInput(e.target.value)} placeholder="Start a post" />
             <button type="submit">submit</button>

@@ -10,13 +10,14 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import Menu from "../menu/Menu";
 
 import { Avatar } from "@mui/material";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/user/userSlice";
 
 const Header = () => {
+  const user = useSelector(selectUser);
+  console.log(user);
   return (
-    <div
-      className="container"
-      style={{ fontSize: "13px" }}
-    >
+    <div className="container" style={{ fontSize: "13px" }}>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -26,14 +27,13 @@ const Header = () => {
               width="50"
               className="d-inline-block align-text-top"
             />
-            Linkdln
+            TAB
           </a>
-
           <div className="bg-white d-none d-sm-block d-sm-none d-md-block mx-4">
             <SearchIcon />
             <input type="text" placeholder="search" />
           </div>
-          <buttond
+          <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -43,18 +43,14 @@ const Header = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </buttond>
-          <div
-            className="navbar-collapse"
-            id="navbarSupportedContent"
-            style={{ cursor: "pointer" }}
-          >
-            <Menu Icon={HomeIcon} title="Home" />
-            <Menu Icon={PeopleIcon} title="Network" />
-            <Menu Icon={BusinessCenterIcon} title="Jobs" />
-            <Menu Icon={MessageIcon} title="Message" />
-            <Menu Icon={NotificationsIcon} title="Notification" />
-            <Menu Icon={Avatar} title="Anand Kumar" />
+          </button>
+          <div className="navbar-collapse" id="navbarSupportedContent">
+            <Menu Icon={HomeIcon} title={"Home"} />
+            <Menu Icon={PeopleIcon} title={"Network"} />
+            <Menu Icon={BusinessCenterIcon} title={"Jobs"} />
+            <Menu Icon={MessageIcon} title={"Message"} />
+            <Menu Icon={NotificationsIcon} title={"Notification"} />
+            <Menu Icon={Avatar} title={user.displayName} />
           </div>
         </div>
       </nav>
